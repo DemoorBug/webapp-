@@ -4,6 +4,7 @@ const devMode = process.env.NODE_ENV !== 'production'
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const copyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -38,7 +39,13 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
-    })
+    }),
+    //之所以放到全局，是因为使用静态文件的时候
+    new copyWebpackPlugin([{
+        from: path.resolve(__dirname, "../src/assets"),
+        to: './assets',
+        // ignore: ['.*']
+    }])
 
   ],
   output: {

@@ -35,11 +35,11 @@ module.exports = merge(common, {
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash:8].css",
     }),
-    new copyWebpackPlugin([{
-        from: path.resolve(__dirname, "../src/assets"),
-        to: './assets',
-        // ignore: ['.*']
-    }]),
+    // new copyWebpackPlugin([{
+    //     from: path.resolve(__dirname, "../src/assets"),
+    //     to: './assets',
+    //     // ignore: ['.*']
+    // }]),
     new copyWebpackPlugin([{
         from: path.resolve(__dirname, "../src/pages/assets"),
         to: './',
@@ -55,10 +55,10 @@ module.exports = merge(common, {
     //   }
     // }),
 
-    new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.src}/pages/*/*`,  { nodir: true }),
-      //白名单css，正则匹配css
-      whitelistPatterns: [/^(slick)/]
-    }),
+    // new PurgecssPlugin({
+    //   paths: glob.sync(`${PATHS.src}/pages/*/*`,  { nodir: true }),
+    //   //白名单css，正则匹配css
+    //   whitelistPatterns: [/^(slick)/]
+    // }),
   ]
 });

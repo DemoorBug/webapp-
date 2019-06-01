@@ -1,0 +1,76 @@
+@import "~@/css/remUnit.less";
+
+
+.seach-bar {
+  margin-top: 38/@r;
+  width: 100%;
+  .px2rem(height, 60);
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bar-location {
+    .px2rem(margin-right, 37);
+    .px2rem(border-radius, 30);
+    .px2rem(width, 186);
+    .px2rem(height, 60);
+    background: rgba(0,0,0,.3);
+    
+    display: flex;
+    align-items: center;
+  }
+
+  .location-icon {
+    display: inline-block;
+    width: 33/@r;
+    height: 42/@r;
+    margin-left: 14/@r;
+    background-image: url('../img/locationIcon.png');
+    background-size: cover;
+  }
+  .location-text {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    margin-left: 15/@r;
+    // vertical-align: 11/@r;
+    &::after {
+      content: ' ';
+      position: absolute;
+      right: -30/@r;
+      top: 1/@r;
+      display: block;
+      width: 29/@r;
+      height: 29/@r;
+      background-image: url('../img/arrowIcon.png');
+      background-size: cover;
+    }
+  }
+  .seach-btn {
+    position: relative;
+    width: 340/@r;
+    height: 60/@r;
+    background: #fff;
+    border-radius: 30/@r;
+  }
+  .seach-btn::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 50%);
+    content: ' ';
+    display: block;
+    width: 30/@r;
+    height: 30/@r;
+    background-image: url('../img/searchIcon.png');
+    background-size: cover;
+  }
+  .place-holder {
+    color: #a9a9a9;
+    height: 100%;
+    line-height: 60/@r;
+    margin-left: 55/@r;
+  }
+}

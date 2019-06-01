@@ -1,0 +1,78 @@
+@import '~@/css/remUnit.less';
+
+.list-content {
+  margin-top: 15/@r;
+  background: #fff;
+  .list-title {
+    height: 80/@r;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title-line {
+      width: 60/@r;
+      height: 6/@r;
+      background: #bec9c8;
+      margin: 0 7/@r;
+      border-radius: 3/@r;
+    }
+  }
+  .list-wrap {
+    margin: 0 21/@r;
+    .r-item-content {
+      position: relative;
+      width: 100%;
+      // margin-left: 21/@r;
+      // margin-right: 21/@r;
+      margin-bottom: 40/@r;
+      
+      display: flex;
+      
+      .brand   {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #ffac39;
+        color: #fff;
+        padding: 7/@r;
+      }
+
+      .item-img {
+        width: 174/@r;
+        height: 131/@r;
+      }
+      .item-info-content {
+        margin-left: 15/@r;
+        flex: 1;
+
+        .tiemt-title {
+          font-weight: bold;
+          margin-bottom: 15/@r;
+        }
+        .item-desc {
+          display: flex;
+          height: 50/@r;
+          align-items: center;
+          justify-content: space-between;
+          .item-desc-fl,
+          .item-desc-fr
+           {
+            flex: 1;
+            display: flex;
+          }
+          .item-desc-fr {
+            justify-content: flex-end;
+          }
+        }
+        .other-info {
+          display: flex;
+          align-items: center;
+          margin-top: 10/@r;
+          .other-content {
+            margin-left: 10/@r;
+          }
+        }
+      }
+    }
+  }
+}
